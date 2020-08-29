@@ -116,7 +116,7 @@
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
-        The initial datasets were taken from Kaggle Open Datasets <a href="https://www.kaggle.com/silicon99/dft-accident-data" target="_blank">(link)</a> detailing UK Car Accidents from 2005 to 2015. The three datasets used contained the following information; accident incidents, accient casualities, and vehicles involved. These datasets are formatted as CSV files and can be downloaded here <a href="datasource.zip">(link)</a>.
+        The initial datasets were taken from Kaggle Open Datasets <a href="https://www.kaggle.com/silicon99/dft-accident-data" target="_blank">(link)</a> detailing UK Car Accidents from 2005 to 2015. The three datasets used contained the following information; accident incidents, accident casualities, and vehicles involved. These datasets are formatted as CSV files and can be downloaded here <a href="datasource.zip">(link)</a>.
       </div>
     </div>
   </div>
@@ -130,7 +130,9 @@
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body">
-        The inital <strong>Accident Incident</strong> CSV was first filtered to include only accidents occuring from 2010 forward. The index from this was then matched to both the <strong>Casuality Incident</strong> CSV and <strong>Vehicle Incident</strong> CSV, in order to merge both Gender, Age and Vehicle statistics into a new dataset.
+        The three dataframes, <strong>Accidents, Casualities, and Vehicles</strong>, were then filtered down to only accidents occurring from 2010 forward.  The <strong>Accidents</strong> columns was narrowed down to the index and location data.  
+        <strong>Casualties</strong> columns were narrowed down to index, sex, and age.  <strong>Vehicles</strong> columns were narrowed down to index and vehicle type.  All three dataframes were merged on Accident Index.  The numbered key values
+        for sex and vehicle type were replaced with their representative string value (ex. 2: Female) along with the combining of all motorcycle engine sizes to one value of "Motorcycle".  The dataframe was filtered further by dropping all rows missing values.  
       </div>
     </div>
   </div>
@@ -144,7 +146,8 @@
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
       <div class="card-body">
-        The transformed dataset was then again filtered to only include the relevant datapoints to our inital query. The final dataset only includes Motorcycle accidents that show the location, gender and age of victim involved.
+        The final dataset only includes Motorcycle accidents from 2010 to 2015 that show the location, gender and age of victim involved.  This could then be further used to determine if a specific
+        gender, age group, or location stands out among the dataset.  
       </div>
     </div>
   </div>
